@@ -1,0 +1,23 @@
+# subdirectories to ignore #
+/Misc
+
+# filetypes to ignore #
+*.docx
+*.xlsx
+*.aux
+*.log
+*.out
+*.synctex*
+*.bbl
+*.blg
+*.nav
+*.snm
+*.toc
+*.maf
+*.mtc*
+*.stc*
+*.bib.bak
+*.vrb
+
+# files to ignore #
+FinalExam.*
