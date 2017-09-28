@@ -50,13 +50,13 @@ A final schedule is below:
  - Week 2: Statistical Foundations I
  - Week 3: Statistical Foundations II
  - Week 4: Practical Issues
- - Week 5: Substantive Topic 1 (TBD)
+ - Week 5: The Politics of Evidence
  - Week 6: Reading Week (no lecture or class)
- - Week 7: Substantive Topic 2 (TBD)
- - Week 8: Substantive Topic 3 (TBD)
- - Week 9: Substantive Topic 4 (TBD)
- - Week 10: Substantive Topic 5 (TBD)
- - Week 11: Conclusion
+ - Week 7: Substantive Topic 1 (TBD)
+ - Week 8: Substantive Topic 2 (TBD)
+ - Week 9: Substantive Topic 3 (TBD)
+ - Week 10: Substantive Topic 4 (TBD)
+ - Week 11: Substantive Topic 5 and Conclusion (TBD)
  
 ## Exam
 
