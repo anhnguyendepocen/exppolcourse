@@ -46,9 +46,9 @@ Familiarity with basic algebra required and comfort with basic statistics as cov
 
 A final schedule is below:
 
- - Week 1: Introduction to Experiments
- - Week 2: Statistical Foundations I
- - Week 3: Statistical Foundations II
+ - Week 1: [Introduction to Experiments](Slides/lecture01.pdf)
+ - Week 2: [Statistical Foundations I](Slides/lecture02.pdf)
+ - Week 3: [Statistical Foundations II](Slides/lecture03.pdf)
  - Week 4: Practical Issues
  - Week 5: The Politics of Evidence
  - Week 6: Reading Week (no lecture or class)
