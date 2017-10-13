@@ -18,6 +18,7 @@
 *.stc*
 *.bib.bak
 *.vrb
+*.dvi
 
 # files to ignore #
 FinalExam.*
