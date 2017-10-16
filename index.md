@@ -52,11 +52,11 @@ A final schedule is below:
  - Week 4: Practical Issues
  - Week 5: The Politics of Evidence
  - Week 6: Reading Week (no lecture or class)
- - Week 7: Substantive Topic 1 (TBD)
- - Week 8: Substantive Topic 2 (TBD)
- - Week 9: Substantive Topic 3 (TBD)
- - Week 10: Substantive Topic 4 (TBD)
- - Week 11: Substantive Topic 5 and Conclusion (TBD)
+ - Week 7: Substantive Topic 1 (Policy nudges)
+ - Week 8: Substantive Topic 2 (Turnout and voter persuasion)
+ - Week 9: Substantive Topic 3 (Social media)
+ - Week 10: Substantive Topic 4 (Deliberation)
+ - Week 11: Substantive Topic 5 and Conclusion (Poverty alleviation)
  
 ## Exam
 
@@ -69,7 +69,7 @@ The individual essay will provide students an opportunity to achieve learning ou
 
 The material covered by the exam will be drawn explicitly and directly from lectures and readings, with class sessions providing both hands-on experience with statistical aspects and discussion of substantive topics. The exam will be designed to assess learning outcomes (1-4) and a formative problem set will provide an opportunity for feedback with respect to learning outcomes (1--2).
 
-The essay is due via Moodle on **XXXX**. The essay should comply with LSE and Government Department policies on summative work. All summative work is subject to automatic plagiarism detection checks. Appropriate academic referencing (quotations, parenthetical citations, footnotes or endnotes, and bibliography) is required. LSE Life can provide support on academic writing and referencing.
+The essay is due via Moodle on **16 January 2018** at 5pm via Moodle. The essay should comply with LSE and Government Department policies on summative work. All summative work is subject to automatic plagiarism detection checks. Appropriate academic referencing (quotations, parenthetical citations, footnotes or endnotes, and bibliography) is required. LSE Life can provide support on academic writing and referencing.
 
 Formative and summative coursework must comply with LSE's policies on academic miconduct and plagiarism. Among other things, ``All work for classes and seminars (which could include, for example, written assignments, group work, presentations, and any other work, including computer programs) must be the student's own work. Direct quotations from other work must be placed properly within quotation marks or indented and must be cited fully. All paraphrased material must be clearly acknowledged. Infringing this requirement, whether deliberately or not, or passing off the work of others as the student’s own work, whether deliberately or not, is plagiarism.'' See the [LSE Calendar](http://www.lse.ac.uk/resources/calendar/undergraduate.htm) for more information.
 
