@@ -29,14 +29,16 @@ The purpose of this problem set is to assess your understanding of one key metho
 
 \begin{solution}
 
-There are multiple ways to think about this.
+The potential outcomes framework (or Neyman--Rubin--Holland causal model) asserts that for each unit, there exist (in theory) one or more counterfactual ``potential'' outcomes, only one of which is \textit{realized}. Causality is defined as the difference in an individual unit's potential outcomes. Because only one potential outcome can be realized, we cannot observe causality at the unit-level.
+
+There are then multiple ways to think about how experiments identify causal effects.
 
 \begin{itemize}
 \item Randomized experiments do not allow us to see individual-level causal effects unless we assume unit homogeneity. In all other cases, randomization allows us to assess average causal effects of a treatment on an outcome.
 \item Randomized experiments randomly sample potential outcomes in an unbiased manner, allowing for estimation of an average treatment effect.
 \item Randomized experiments randomly expose one of multiple potential outcomes for each individual in the sample.
-\item Randomized experiments eliminate selection bias into treatment assignment.
 \item Randomized experiments eliminate confounding.
+\item Randomized experiments eliminate selection bias into treatment assignment because the we examine variation in an outcome due to variation in treatment induced by the randomization process.
 \end{itemize}
 
 \end{solution}
@@ -52,14 +54,16 @@ Discuss the trade-offs involved in these designs, including what would be requir
 
 \begin{solution}
 
-There are numerous trade-offs here and there is no correct answer. The first design is a population-based survey with no experimental component. The second design is a laboratory experiment involving a non-representative sample.
+There are numerous trade-offs here and there is no correct answer. Some trade-offs you could consider include:
 
-The former design has claims to ``external'' validity because sample characteristics are unbiased estimates of population parameters. In attempting to infer causation, however, the design does not necessarily address selection bias: it does not induce debate viewing, so we cannot know why people watched the debate and whether any of those factors also explain vote intentions (e.g., some third variable explains both forms of political engagement). The measurement of vote intention occurs some time after the debate, possibly suggesting durability of any influence.
-
-The latter design has claims to ``internal'' validity because randomized assignment to debate viewing enables an estimation of an average causal effect of viewing the debate but that effect does not necessarily reflect the average effect in any population. The measurement of vote intentions occurs immediately. In both designs, this measurement of vote intention may not say anything about actual voting behavior.
-
-Both designs likely present other trade-offs: feasibility, cost, etc.
-
+\begin{itemize}
+\item The first design uses a population-based (i.e., representative) sample but includes no experimental component. The representativeness ensures a degree of external validity because the group of participants are selected from (a subset of) the population as a whole. The second design is an experiment involving participants recruited from a convenience (i.e., non-representative) sample, thus potentially limiting external validity because those who are locally convenient may differ from the population of people who are just above the threshold nationwide.
+\item Strictly speaking, the two designs estimate effects on slightly different populations: the first for the population just above and just below the cutoff; the second only for the population just above the cutoff.
+\item The first design is a ``regression discontinuity design'' where it is assumed that those just above and just below the cutoff are sufficiently similar to provide counterfactuals for one another. But, given that the cutoff already exists, one needs to be cognizant of ``Campbell's Law'' (i.e., the exploitation of social indicators, which induces selection pressures and/or compensatory behaviour). We may also then need to introduce controls for any factors that differ between those just above and just below the cutoff.
+\item The second design is a straightforward experiment, so estimation of effects is simple provided that there is compliance with the treatment (i.e., no one receives a treatment other than what they are assigned) and no attrition (i.e., no one leaves the study). There may be ethical questions related to providing assistance to a random subset of people that would be worth considering.
+\item Both designs suffer from ambiguity about how outcomes (i.e., educational attainment) will actually be measured. This could be quite complex given that education is a long-run outcome that may not be known for many years. This invites further complexities about deciding when to stop the study, the cost of monitoring outcomes, etc.
+\item Both studies will have similar power --- a sample of roughly equal size in either design will generate approximately similar variances.
+\end{itemize}
 \end{solution}
 
 \item Consider an experiment on 500 individuals in which one group is randomly assigned to read a treatment message from Boris Johnson supporting a ``no deal'' position in the ongoing Brexit negotiations and another group is assigned to a control condition that receives no information. Measures of opinions for about support for ``no deal'' are recorded for both groups on a 0 to 1 scale, with higher scores indicating greater favorability toward ``no deal.''
@@ -68,19 +72,15 @@ Both designs likely present other trade-offs: feasibility, cost, etc.
 \item Assuming the treatment group mean score was 0.68 and the control group mean score was .51, what is the average treatment effect? Is this substantively large or small?
 
 \begin{solution}
-
 The sample average treatment effect is simply the mean difference: $0.68 - 0.51 = 0.17$.
 
-Deciding whether this is large or small requires some kind of benchmark for comparison. We could say this is 17\% of the scale (from 0 to 1). Or, we could compare it to the standard deviation of the outcome to express a ``standardized mean-difference'' but that information is not provided here. Assuming the standard deviation were 0.4, then the effect size would be $\frac{0.17}{0.40} = 0.425$, and so forth.
-
+Deciding whether this is large or small requires some kind of benchmark for comparison. We could say this is 17\% of the scale (from 0 to 1). Or, we could compare it to the standard deviation of the outcome to express a ``standardized mean-difference'' but that information is not provided here. Assuming the standard deviation were 0.4, then the effect size would be $\frac{0.17}{0.40} = 0.425$, and so forth. The decision about whether an effect is substantively large or small is subjective depending on what the researcher (and consumers of the research) would consider to be large or small.
 \end{solution}
 
 \item Assuming the t-statistic for the mean-difference is 1.76, should we consider this effect to be statistically large and distinguishable from zero?
 
 \begin{solution}
-
-Answering this question technically requires consulting a t-distribution. You can find one \href{https://en.wikipedia.org/wiki/Student\%27s_t-distribution#Table_of_selected_values}{on Wikipedia}. Given the very large sample size, use the $\infty$ row of the table. a $t$-statistic of this size is considered statistically distinguishable from zero in the case of a one-tailed test ($p<0.05$) but not in a two-tailed test ($p<0.10$). If we had a strong directional prediction that the treatment outcome would be higher than the control outcome, we could consider the one-tailed test appropriate but probably not otherwise.
-
+Answering this question technically requires consulting a $t$-distribution. You can find one \href{https://en.wikipedia.org/wiki/Student\%27s_t-distribution#Table_of_selected_values}{on Wikipedia}. Given the very large sample size, use the $\infty$ row of the table. a $t$-statistic of this size is considered statistically distinguishable from zero in the case of a one-tailed test ($p<0.05$) but not in a two-tailed test ($p<0.10$). A very simple rule-of-thumb is that a $t$-statistic larger than 2 indicates that the difference can be considered statistically significant in a large sample, for a two-tailed test. (If we had a strong directional prediction that the treatment outcome would be higher than the control outcome, we could consider the one-tailed test appropriate but probably not otherwise.)
 \end{solution}
 
 \end{enumerate}
@@ -88,16 +88,19 @@ Answering this question technically requires consulting a t-distribution. You ca
 \item What is a randomisation distribution? What can we learn from the randomisation distribution for the sample average treatment effect?
 
 \begin{solution}
+The randomisation distribution is a particular kind of sampling distribution for the average treatment effect, which conveys the variation in estimates of an ATE (that is actually 0) due to chance variation. Rather than assuming a ``parametric distribution'' (such as the $t$ distribution), the randomisation distribution uses the data we observe from our experiment to create a set of possible values of the ATE that we could see in these data if the true ATE were 0 (i.e., there is no difference between the two treatments) and we simply shuffled which units were assigned to which treatment, calculating the apparent ATE in each re-randomisation.
+
+The randomisation distribution allows us to see whether our observed ATE is unusually large or small (i.e., to calculate a p-value) as we all as calculate the variance or standard error of the ATE without assuming a particular parametric distribution. In large samples, this will be identical to values generated from a $t$-distribution.
 \end{solution}
 
-\item The statistical power of a two-sample t-test (which is, in essence, the power of a posttest-only, two-group experimental design) is influenced by four main things: the size of each experimental group, the difference-in-means (i.e., difference in mean values of the outcome in the two groups), the variance of the outcome measure, and $\alpha$ (the significance level or ``Type 1'' error probability).
+\item The statistical power of a two-sample $t$-test (which is, in essence, the power of a posttest-only, two-group experimental design) is influenced by four main things: the size of each experimental group, the difference-in-means (i.e., difference in mean values of the outcome in the two groups), the variance of the outcome measure, and $\alpha$ (the significance level or ``Type 1'' error probability).
 
 	\begin{enumerate}
 	\item If $\alpha$ (the Type 1 error probability) is 0.05, how often should we expect to find a ``statistically significant'' effect size when one is not present?
 	
 	\begin{solution}
 	
-	This is simply 0.05 or 5\% of the time.
+	This is simply 0.05 or 5\% of the time (i.e., the ``false positive rate'').
 	
 	\end{solution}
 	
@@ -111,9 +114,9 @@ Answering this question technically requires consulting a t-distribution. You ca
 	Power = \phi\left( \frac{|\mu_1 - \mu_0|\sqrt{N}}{2\sigma} - \phi^{-1}\left( 1 - \frac{\alpha}{2} \right) \right)
 	\end{equation}
 	
-	Without worrying about all the details of the equation, note that sample size is in the numerator of the first term, so more observations means more power. This directly translates into a lower likelihood of false negatives ($1-\beta$) where power is denoted $\beta$.
+	Without worrying about all the details of the equation, note that sample size is in the numerator of the first term, so more observations means more power. This directly translates into a lower likelihood of false zeroes ($1-\beta$) where power is denoted $\beta$.
 	
-	Technically, this is unrelated to the false positive rate, which is a function of the selected significance level, $\alpha$, only.
+	This is unrelated to the false positive rate, which is a function of the selected significance level, $\alpha$, only, so we would still expect to encounter false positives 5\% of the time.
 	
 	\end{solution}
 	
@@ -123,7 +126,7 @@ Answering this question technically requires consulting a t-distribution. You ca
 	
 	\begin{enumerate}
 	\item The effect is actually larger than we expected.
-	\item The effect in our experiment is a massive overestimate.
+	\item The effect in our experiment is a massive overestimate (i.e., a false positive).
 	\end{enumerate}
 	
 	We cannot distinguish which alternative is correct.
@@ -135,13 +138,21 @@ Answering this question technically requires consulting a t-distribution. You ca
 \item Sometimes experiments are ``broken'' due to challenges of implementing an intervention and measuring outcomes. In what ways can experiments fail? And what implication(s) does each of those points of failure have on the analysis of the experimental data and the interpretation thereof?
 
 \begin{solution}
-TBD
+
+\begin{itemize}
+\item Noncompliance: sometimes units do not receive the treatment they were assigned. This could be due to administrative failures in implementing the intervention or because of self-selection out of treatment. This limits our ability to understand the effect of treatment in potentially complex ways. If noncompliance is asymmetric (i.e., occurring only in one group), our effect size is diminished. If noncompliance is symmetric (i.e., occurring in two or more groups), we do not know the direction of bias.
+\item Attrition: sometimes units leave the study before it has finished. This limits our ability to understand the effect of treatment both by reducing effective sample size (we have less power than anticipated) and by potentially biasing treatment effects if attrition is nonrandom (i.e., correlated with pretreatment covariates or treatment itself).
+\item Missing outcome data: sometimes we simply have missing data on outcomes (e.g., due to failure to measure or record outcome data). While potentially distinct from attrition, the implications are the same (reduced power and potentially biased treatment effect estimates).
+\item Contamination/Spillover: sometimes units are not independent but instead are networked in some way (e.g., students within classes or families within households). If we attempt to closely linked units to distinct treatments, we have to be aware that one treatment might bleed into or contaminate another unit's experiment. This is easily avoided by, for example, not assigning units in a household to different conditions. If it occurs, we violate a core assumption called SUTVA (stable unit treatment value assumption) and largely cannot know what effect treatment had on units without strong assumptions about how units are interconnected.
+\item Treatment heterogeneiety: sometimes units in the same experimental condition in practice receive different treatments (e.g., variations on a conversation, variations on an education intervention, etc.). This may or may not be problematic. If our goal is to understand in broad terms what the effect of an intervention is, this is not a problem. If we care about mechanisms or the specific details of what part of the intervention affected outcomes, then units are actually not providing consistent evidence about a single intervention and we therefore learn nothing.
+\end{itemize}
+
 \end{solution}
 
 \item Are experiments more or less useful than other methods for generating evidence-based policy? Why? What caveats --- if any --- should be placed on the use of experimental evidence for policy and decision-making?
 
 \begin{solution}
-TBD
+This is completely subjective. We have discussed lots of advantages and disadvantages of experimentation for providing causal evidence. Experiments provide clear causal inference but can only be used in certain circumstances. They may trade-off internal validity and external validity and they may pose ethical issues or constraints. Whether experiments should inform public policy and do so more than other types of evidence therefore requires judgements about the competence of policy-makers to interpret different kinds of evidence.
 \end{solution}
 
 \end{enumerate}
